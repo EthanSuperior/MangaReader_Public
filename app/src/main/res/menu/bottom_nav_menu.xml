@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Updates" />
+    <item
+        android:id="@+id/navigation_web_chapters"
+        android:title="Edit" />
+    <item
+        android:id="@+id/navigation_failed_chapters"
+        android:title="Notices" />
+</menu>

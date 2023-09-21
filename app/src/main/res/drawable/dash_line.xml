@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <stroke
+        android:width="1dp"
+        android:alpha=".25"
+        android:color="@color/cardview_dark_background"
+        android:dashWidth="4dp"
+        android:dashGap="8dp" />
+</shape>

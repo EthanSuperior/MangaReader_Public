@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snoozed Chapters"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/snooze_updates_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:scrollIndicators="right"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/chapter_item" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/failed_update_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Failed Chapters"
+                android:textAlignment="gravity"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/refresh_failed_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginHorizontal="8dp"
+                android:background="@null"
+                android:includeFontPadding="true"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_baseline_refresh_24"
+                android:text="A"
+                android:textAlignment="textEnd"
+                android:textColor="@color/textColorPrimaryLight" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/failed_updates_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:scrollIndicators="right"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/chapter_item" />
+
+</LinearLayout>

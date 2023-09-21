@@ -1,0 +1,224 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_edit_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/dialog_edit_share_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/baseline_share_24"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_close"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_title_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dialog_edit_title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:width="100dp"
+        android:hint="@string/manga_title"
+        android:minHeight="48dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_snooze"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dialog_edit_fav_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#F3CE11" />
+
+    <ImageButton
+        android:id="@+id/dialog_edit_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/dialog_edit_vert_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/dash_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_title_text" />
+
+    <EditText
+        android:id="@+id/dialog_edit_source_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:width="100dp"
+        android:hint="Manga homepage"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_vert_line" />
+
+    <EditText
+        android:id="@+id/dialog_edit_prev_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:width="100dp"
+        android:hint="No previous URL provided"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_use_js"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_source_url" />
+
+    <EditText
+        android:id="@+id/dialog_edit_next_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:width="100dp"
+        android:hint="Nothing Found"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_prev_url" />
+
+    <EditText
+        android:id="@+id/dialog_edit_selector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:width="100dp"
+        android:hint="Use default finder"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_link_pos"
+        app:layout_constraintStart_toStartOf="@+id/dialog_edit_source_url"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_next_url" />
+
+    <EditText
+        android:id="@+id/dialog_edit_link_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:checked="false"
+        android:hint="Link #"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_edit_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_edit_selector" />
+
+    <Button
+        android:id="@+id/dialog_edit_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/buttonColorLight"
+        android:text="Save Changes"
+        app:icon="@drawable/baseline_save_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_refresh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_selector" />
+
+    <ImageButton
+        android:id="@+id/dialog_edit_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_refresh_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_find_selector"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_selector" />
+
+    <ImageButton
+        android:id="@+id/dialog_edit_find_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_snooze"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_selector" />
+
+    <ImageButton
+        android:id="@+id/dialog_edit_snooze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_snooze_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_delete"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_selector" />
+
+    <ImageButton
+        android:id="@+id/dialog_edit_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_selector" />
+
+    <CheckBox
+        android:id="@+id/dialog_edit_use_js"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="JS?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_edit_prev_url" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

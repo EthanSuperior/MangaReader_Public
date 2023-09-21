@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light theme colors -->
+    <color name="colorPrimaryLight">#6200EE</color>
+    <color name="colorPrimaryDarkLight">#3700B3</color>
+    <color name="colorAccentLight">#03DAC5</color>
+    <color name="textColorPrimaryLight">#000000</color>
+    <color name="textColorSecondaryLight">#757575</color>
+    <color name="backgroundLight">#F8F8F8</color>
+
+    <!-- Dark theme colors -->
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorPrimaryDarkDark">#673AB7</color>
+    <color name="colorAccentDark">#03DAC5</color>
+    <color name="textColorPrimaryDark">#FFFFFF</color>
+    <color name="textColorSecondaryDark">#BDBDBD</color>
+    <color name="backgroundDark">#212121</color>
+
+
+    <!-- Light mode button colors -->
+    <color name="buttonColorLight">#3700B3</color>
+    <color name="buttonTextColorLight">#000000</color>
+
+    <!-- Dark mode button colors -->
+    <color name="buttonColorDark">#3700B3</color>
+    <color name="buttonTextColorDark">#FFFFFF</color>
+
+</resources>

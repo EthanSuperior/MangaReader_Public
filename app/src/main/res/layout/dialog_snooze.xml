@@ -1,0 +1,145 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_snooze_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dialog_snooze_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_baseline_warning_24"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_snooze_title_text"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_snooze_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_snooze_title_text"
+        tools:srcCompat="@drawable/ic_baseline_snooze_24" />
+
+    <TextView
+        android:id="@+id/dialog_snooze_title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:width="100dp"
+        android:minHeight="48dp"
+        android:text="@string/manga_title"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_snooze_close_button"
+        app:layout_constraintStart_toEndOf="@+id/dialog_snooze_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dialog_snooze_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/dash_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_snooze_title_text" />
+
+
+    <EditText
+        android:id="@+id/dialog_snooze_delay_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Chapter Delay"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_snooze_clear_delay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_snooze_title_text" />
+
+    <ImageButton
+        android:id="@+id/dialog_snooze_clear_delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_snooze_delay_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_snooze_delay_edit_text" />
+
+    <Button
+        android:id="@+id/dialog_snooze_date_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:text="Set"
+        android:backgroundTint="@color/buttonColorLight"
+        app:icon="@drawable/ic_baseline_edit_calendar_24"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_snooze_clear_delay"
+        app:layout_constraintStart_toEndOf="@+id/dialog_snooze_date_text"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_snooze_delay_edit_text" />
+
+    <ImageButton
+        android:id="@+id/dialog_snooze_clear_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_snooze_date_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_snooze_date_button" />
+
+    <Button
+        android:id="@+id/dialog_snooze_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Save Changes"
+        app:icon="@drawable/baseline_save_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_snooze_date_button"
+        android:backgroundTint="@color/buttonColorLight" />
+
+    <TextView
+        android:id="@+id/dialog_snooze_date_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center|right"
+        android:text="Date:12/23"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_snooze_date_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_snooze_date_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

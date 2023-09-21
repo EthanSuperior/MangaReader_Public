@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/updates"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/title"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:alpha=".5"
+        android:gravity="center|end"
+        android:maxLines="1"
+        android:text="9999/9999"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/update_penguin_hug"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/btnAllUpdate"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/penguin_hug" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/layoutRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAllUpdate"
+        android:layout_below="@+id/title"
+        android:scrollIndicators="right"
+        android:scrollbars="vertical"
+        android:background="@null"
+        tools:context=".fragments.MainActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutBtn"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:scrollIndicators="right"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            tools:listitem="@layout/chapter_item" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/refresh_display_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="8dp"
+        android:backgroundTint="@color/buttonColorLight"
+        android:includeFontPadding="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="40dp"
+        android:text="Refresh"
+        app:icon="@drawable/ic_baseline_refresh_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAllUpdate"
+        app:layout_constraintTop_toBottomOf="@id/layoutRefresh" />
+
+    <Button
+        android:id="@+id/btnAllUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="8dp"
+        android:layout_toEndOf="@+id/refresh_display_btn"
+        android:backgroundTint="@color/buttonColorLight"
+        android:paddingStart="8dp"
+        android:paddingEnd="40dp"
+        android:text="Mark All"
+        app:icon="@drawable/ic_baseline_checklist_rtl_24"
+        app:layout_constraintBottom_toBottomOf="@+id/refresh_display_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/refresh_display_btn" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WebScrapper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
+        <item name="colorAccent">@color/colorAccentDark</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryDark</item>
+        <item name="android:background">@color/backgroundDark</item>
+        <item name="buttonStyle">@style/ButtonStyleDark</item>
+        <item name="imageButtonStyle">@style/ImageButtonStyleDark</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="ButtonStyleDark" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@color/backgroundLight</item>
+        <item name="android:backgroundTint">@color/buttonColorDark</item>
+        <item name="android:textColor">@color/buttonTextColorDark</item>
+    </style>
+
+    <style name="ImageButtonStyleDark" parent="Widget.AppCompat.ImageButton">
+        <item name="backgroundTint">@color/buttonColorDark</item>
+        <item name="tint">@color/buttonTextColorDark</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WebScrapper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkLight</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryLight</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryLight</item>
+        <item name="android:background">@color/backgroundLight</item>
+        <item name="buttonStyle">@style/ButtonStyleLight</item>
+        <item name="imageButtonStyle">@style/ImageButtonStyleLight</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="ButtonStyleLight" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@color/backgroundLight</item>
+        <item name="android:backgroundTint">@color/buttonColorLight</item>
+        <item name="android:textColor">@color/buttonTextColorLight</item>
+    </style>
+
+    <style name="ImageButtonStyleLight" parent="Widget.AppCompat.ImageButton">
+        <item name="backgroundTint">@color/buttonColorLight</item>
+        <item name="tint">@color/buttonTextColorLight</item>
+    </style>
+
+    <style name="Theme.WebScrapper.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_liked"
+        android:title="Liked"
+        android:icon="@drawable/baseline_star_24" />
+    <item
+        android:id="@+id/menu_item_loved"
+        android:title="Loved"
+        android:icon="@drawable/baseline_heart_24" />
+    <item
+        android:id="@+id/menu_item_possible"
+        android:title="Possible"
+        android:icon="@drawable/baseline_bookmark_24" />
+    <item
+        android:id="@+id/menu_item_completed"
+        android:title="Completed"
+        android:icon="@drawable/baseline_check_circle_24" />
+    <item
+        android:id="@+id/menu_item_dropped"
+        android:title="Dropped"
+        android:icon="@drawable/baseline_pause_circle_24" />
+</menu>

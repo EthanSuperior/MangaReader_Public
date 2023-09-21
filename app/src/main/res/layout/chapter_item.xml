@@ -1,0 +1,189 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:longClickable="true"
+    android:minHeight="0dp"
+    android:padding="0dp"
+    android:paddingStart="8dp"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:paddingRight="8dp"
+    android:background="@color/backgroundLight">
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:hint="@string/manga_title"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/link_textview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_baseline_warning_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/link_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:autoLink="web"
+        android:hint="3/5"
+        android:linksClickable="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/status_button"
+        app:layout_constraintStart_toEndOf="@+id/title_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="240dp" />
+    <!--        app:layout_constraintEnd_toStartOf="@+id/dropdown_arrow"-->
+
+    <ImageButton
+        android:id="@+id/status_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:src="@drawable/ic_baseline_refresh_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--
+    <ImageView
+        android:id="@+id/dropdown_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#AE0F0F"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expanded_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/dash_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/prev_url_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="No previous URL provided"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/edit_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/next_url_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Nothing Found"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/edit_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prev_url_textview" />
+
+        <TextView
+            android:id="@+id/base_url_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Manga homepage"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/selector_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/next_url_textview" />
+
+        <TextView
+            android:id="@+id/selector_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:hint="Default finder used"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/source_url_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/source_url_textview"
+            app:layout_constraintTop_toTopOf="@+id/source_url_textview" />
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:background="@null"
+            android:clickable="true"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_sourceline_edit_24"
+            app:layout_constraintBottom_toTopOf="@+id/selector_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-4dp"
+        android:alpha=".5"
+        android:background="?android:textColorPrimary"
+        android:contextClickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
